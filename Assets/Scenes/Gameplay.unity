@@ -128,8 +128,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 223369897}
-  - component: {fileID: 223369896}
   - component: {fileID: 223369900}
+  - component: {fileID: 223369901}
+  - component: {fileID: 223369896}
   - component: {fileID: 223369898}
   - component: {fileID: 223369899}
   m_Layer: 0
@@ -239,7 +240,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &223369899
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -304,6 +305,18 @@ MonoBehaviour:
   moveLeft: 276
   moveSpeed: 1000
   isContinuousMovement: 1
+--- !u!114 &223369901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 223369895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1252dd4d0e5dca418d2644f5305b04e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionHandle
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -672,8 +685,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 754140585}
-  - component: {fileID: 754140584}
   - component: {fileID: 754140588}
+  - component: {fileID: 754140589}
+  - component: {fileID: 754140584}
   - component: {fileID: 754140586}
   - component: {fileID: 754140587}
   m_Layer: 0
@@ -783,7 +797,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &754140587
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -848,6 +862,18 @@ MonoBehaviour:
   moveLeft: 97
   moveSpeed: 1000
   isContinuousMovement: 1
+--- !u!114 &754140589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 754140583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1252dd4d0e5dca418d2644f5305b04e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionHandle
 --- !u!1 &945396129
 GameObject:
   m_ObjectHideFlags: 0
