@@ -20,8 +20,8 @@ public class ColorLabel : MonoBehaviour
     }
     private string GetColorName(Color c)
     {
-        if (c == Color.green) return "Green";
-        if (c == Color.blue) return "Blue";
+        if (c == Color.green) return "GREEN";
+        if (c == Color.blue) return "BLUE";
         return "None";
     }
 }
