@@ -6,18 +6,18 @@ public class SliderSpeed : MonoBehaviour
 {
     [Header("Data")]
     [SerializeField] private PlayerDataSo data;
-    private Slider sliderP1Speed;
+    private Slider sliderSpeed;
     private void Awake()
     {
-        sliderP1Speed = GetComponent<Slider>();
-        sliderP1Speed.onValueChanged.AddListener(OnValueChangedSliderP1Speed);
+        sliderSpeed = GetComponent<Slider>();
+        sliderSpeed.onValueChanged.AddListener(OnValueChangedSliderSpeed);
     }
     private void OnDestroy()
     {
-        sliderP1Speed.onValueChanged.RemoveAllListeners();
+        sliderSpeed.onValueChanged.RemoveAllListeners();
     }
-    private void OnValueChangedSliderP1Speed(float arg0)
+    private void OnValueChangedSliderSpeed(float arg0)
     {
-        data.speed = arg0;
+        data.SetSpeed(arg0);
     }
 }

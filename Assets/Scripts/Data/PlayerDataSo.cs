@@ -24,6 +24,7 @@ public class PlayerDataSo : ScriptableObject
 
     public event Action<int> OnVariantChanged;
     public event Action<Color> OnColorChanged;
+    public event Action<float> OnSpeedChanged;
     public void SetColor(Color newColor)
     {
         color = newColor;
@@ -35,5 +36,10 @@ public class PlayerDataSo : ScriptableObject
         if (variantPrefabs == null || variantPrefabs.Length == 0) return;
         variantIndex = Mathf.Clamp(index, 0, variantPrefabs.Length - 1);
         OnVariantChanged?.Invoke(variantIndex);
+    }
+    public void SetSpeed (float newSpeed)
+    {
+        speed = newSpeed;
+        OnSpeedChanged?.Invoke(speed);
     }
 }
