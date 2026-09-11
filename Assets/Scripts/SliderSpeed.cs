@@ -2,8 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SliderSpeed
-    : MonoBehaviour
+public class SliderSpeed : MonoBehaviour
 {
     [Header("Data")]
     [SerializeField] private PlayerDataSo data;
