@@ -9,7 +9,7 @@ public class PlayerDataSo : ScriptableObject
     public KeyCode moveLeft = KeyCode.A;
 
     [Header("SpeedSettings")]
-    [Range(0,15)] public float speed = 5.0f;
+    [Range(1,3)] public float speed = 1.0f;
 
     [Header("VisualSettings")]
     public Sprite spriter;

@@ -16,6 +16,6 @@ MonoBehaviour:
   moveDown: 274
   moveRight: 275
   moveLeft: 276
-  speed: 5
+  speed: 10
   spriter: {fileID: 8712126577781240229, guid: 96c23095bab28b742a2379028f453308, type: 3}
   color: {r: 0.8805031, g: 0.019381998, b: 0.019381998, a: 1}
