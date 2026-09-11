@@ -22,6 +22,6 @@ public class ColorLabel : MonoBehaviour
     {
         if (c == Color.green) return "GREEN";
         if (c == Color.blue) return "BLUE";
-        return "None";
+        return "NONE";
     }
 }
