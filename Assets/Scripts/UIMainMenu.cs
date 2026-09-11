@@ -24,10 +24,6 @@ public class UIMainMenu : MonoBehaviour
         btnCredits.onClick.AddListener(OnCreditsClicked);
         btnExit.onClick.AddListener(OnExitClicked);
     }
-    private void Start()
-    {
-        
-    }
 
     private void OnDestroy()
     {
