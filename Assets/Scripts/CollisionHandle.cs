@@ -38,7 +38,7 @@ public class CollisionHandle : MonoBehaviour
 
         if (powerUp != null)
         {
-
+            powerUp.DoAction();
 
         }
     }

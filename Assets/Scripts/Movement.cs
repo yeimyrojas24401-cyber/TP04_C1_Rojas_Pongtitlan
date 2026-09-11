@@ -2,62 +2,45 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    [Header("MovementSettings")]
-    [SerializeField] private KeyCode moveUp = KeyCode.W;
-    [SerializeField] private KeyCode moveDown = KeyCode.S;
-    [SerializeField] private KeyCode moveRight = KeyCode.D;
-    [SerializeField] private KeyCode moveLeft = KeyCode.A;
-
-    [Header("SpeedSettings")]
-    public float moveSpeed = 1f;
+    [Header("Data")]
+    [SerializeField] private PlayerDataSo data;
 
     [SerializeField] private bool isContinuousMovement = true;
 
+    private float moveSpeedPlayer;
+
     private Rigidbody2D rb;
+    
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+
+    }
+    private void Start ()
+    {
+        moveSpeedPlayer = data.speed;
     }
 
     private void FixedUpdate()
     {
        if (isContinuousMovement)
         {
-            if (Input.GetKey(moveUp))
+            if (Input.GetKey(data.moveUp))
             {
-                rb.AddForce(new Vector3(0,moveSpeed * Time.deltaTime));
+                rb.linearVelocity = new Vector2(0, data.speed);
             }
-            if (Input.GetKey(moveDown))
+            if (Input.GetKey(data.moveDown))
             {
-                rb.AddForce (new Vector3(0, -moveSpeed * Time.deltaTime));
+                rb.linearVelocity = new Vector2(0, -data.speed);
             }
-            if (Input.GetKey(moveRight))
+            if (Input.GetKey(data.moveRight))
             {
-                rb.AddForce(new Vector3(moveSpeed * Time.deltaTime, 0));
+                rb.linearVelocity = new Vector2(data.speed, 0);
             }
-            if (Input.GetKey(moveLeft))
+            if (Input.GetKey(data.moveLeft))
             {
-                rb.AddForce(new Vector3(-moveSpeed * Time.deltaTime, 0));
+                rb.linearVelocity = new Vector2(-data.speed, 0);
             }
-        }
-        else
-        {
-            if (Input.GetKey(moveUp))
-            {
-                rb.position += new Vector2 (0, moveSpeed * Time.deltaTime);
-            }
-            if (Input.GetKey(moveDown))
-            {
-                rb.position += new Vector2(0, -moveSpeed * Time.deltaTime);
-            }
-            if (Input.GetKey(moveRight))
-            {
-                rb.position += new Vector2(moveSpeed * Time.deltaTime, 0);
-            }
-            if (Input.GetKey(moveLeft))
-            {
-                rb.position += new Vector2(-moveSpeed * Time.deltaTime, 0);
-            } 
         }
     }
 }
