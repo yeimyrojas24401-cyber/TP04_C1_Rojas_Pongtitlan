@@ -18,4 +18,4 @@ MonoBehaviour:
   moveLeft: 97
   speed: 3
   spriter: {fileID: -1255965977449420377, guid: b00c0cf584c251d4e9cb5cab8acb2b0d, type: 3}
-  color: {r: 0.0090778135, g: 0.1610573, b: 0.9622642, a: 1}
+  color: {r: 0, g: 1, b: 0, a: 1}

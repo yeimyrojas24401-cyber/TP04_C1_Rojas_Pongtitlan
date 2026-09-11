@@ -303,6 +303,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Movement
   data: {fileID: 11400000, guid: 6e8af08e513bcc541a02025127d9c1e9, type: 2}
   isContinuousMovement: 1
+  moveSpeedPlayer: 15
 --- !u!114 &223369901
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1026,6 +1027,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Movement
   data: {fileID: 11400000, guid: 9291494fc7d19374184fee58f7812e72, type: 2}
   isContinuousMovement: 1
+  moveSpeedPlayer: 15
 --- !u!114 &754140589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1634,7 +1636,7 @@ BoxCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: a1a71cff9801cad4688b7e46c6fc5231, type: 2}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
