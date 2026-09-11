@@ -18,17 +18,8 @@ public class SliderColor : MonoBehaviour
     }
     private void OnValueChangedSliderColor(float arg0)
     {
-        if (sliderColor.value == 1)
-        {
-            data.color = Color.white;
-        }
-        if (sliderColor.value == 2)
-        {
-            data.color = Color.green;
-        }
-        if (sliderColor.value == 3)
-        {
-            data.color = Color.blue;
-        }
+        if (sliderColor.value == 1) data.SetColor(Color.white);
+        if (sliderColor.value == 2) data.SetColor(Color.green);
+        if (sliderColor.value == 3) data.SetColor(Color.blue);
     }
 }

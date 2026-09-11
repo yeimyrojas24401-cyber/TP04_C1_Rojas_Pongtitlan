@@ -4,15 +4,10 @@ public class ColorChanger : MonoBehaviour
 {
     [Header("Data")]
     [SerializeField] private PlayerDataSo data;
-
-    private SpriteRenderer spriteRenderer;
+    [SerializeField] private PlayerVisualController visual;
 
     private void Awake ()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-    }
-    private void Start()
-    {
-        spriteRenderer.color = data.color;
+        data.OnColorChanged += _ => visual.ApplyColor();
     }
 }

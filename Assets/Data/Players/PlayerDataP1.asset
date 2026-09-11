@@ -17,5 +17,8 @@ MonoBehaviour:
   moveRight: 100
   moveLeft: 97
   speed: 3
-  spriter: {fileID: -1255965977449420377, guid: b00c0cf584c251d4e9cb5cab8acb2b0d, type: 3}
+  variantPrefabs:
+  - {fileID: 703990472317093879, guid: 0aa67e8a8054e9844997ba240baffe07, type: 3}
+  - {fileID: 5257710148914385262, guid: 302929c3e95ee744bb8bfe34359a8fa7, type: 3}
+  - {fileID: 819797087610235730, guid: 55a9fa772677cc44792146d5f844512b, type: 3}
   color: {r: 0, g: 1, b: 0, a: 1}

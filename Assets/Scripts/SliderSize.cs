@@ -12,6 +12,12 @@ public class SliderSize : MonoBehaviour
     private void Awake()
     {
         sliderSize = GetComponent<Slider>();
+
+        sliderSize.wholeNumbers = true;
+        sliderSize.minValue = 0;
+        sliderSize.maxValue = data.variantPrefabs.Length - 1;
+        sliderSize.value = data.variantIndex;
+
         sliderSize.onValueChanged.AddListener(OnValueChangedSliderSize);
     }
     private void OnDestroy()
@@ -20,6 +26,6 @@ public class SliderSize : MonoBehaviour
     }
     private void OnValueChangedSliderSize(float arg0)
     {
-        //data.spriter = ;
+        data.SetVariantIndex(Mathf.RoundToInt(arg0));
     }
 }
