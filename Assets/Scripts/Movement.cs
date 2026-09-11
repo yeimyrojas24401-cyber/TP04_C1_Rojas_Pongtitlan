@@ -7,7 +7,9 @@ public class Movement : MonoBehaviour
 
     [SerializeField] private bool isContinuousMovement = true;
 
-    private float moveSpeedPlayer;
+    [Header("Debug: ")]
+    [SerializeField] private float moveSpeedPlayer = 15.0f;
+
 
     private Rigidbody2D rb;
     
