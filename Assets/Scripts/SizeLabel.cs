@@ -9,7 +9,7 @@ public class SizeLabel : MonoBehaviour
     [SerializeField] private TMP_Text label;
 
     [Header("Labels")]
-    [SerializeField] private string[] sizeNames = { "Small", "Medium", "Large" };
+    [SerializeField] private string[] sizeNames = { "SMALL", "MEDIUM", "LARGE" };
 
     private void OnEnable()
     {
