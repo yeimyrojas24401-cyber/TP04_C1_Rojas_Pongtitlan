@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class UIMainMenu : MonoBehaviour
@@ -12,18 +13,15 @@ public class UIMainMenu : MonoBehaviour
     [Header("Buttons")]
     [SerializeField] private Button btnPlay;
     [SerializeField] private Button btnSettings;
-    [SerializeField] private Button btnContinue;
+    [SerializeField] private Button btnCredits;
     [SerializeField] private Button btnExit;
-
-    [Header("Data")]
-    [SerializeField] private PlayerDataSo data;
 
 
     private void Awake()
     {
         btnPlay.onClick.AddListener(OnPlayClicked);
         btnSettings.onClick.AddListener(OnSettingsClicked);
-        btnContinue.onClick.AddListener(OnContinueClicked);
+        btnCredits.onClick.AddListener(OnCreditsClicked);
         btnExit.onClick.AddListener(OnExitClicked);
     }
     private void Start()
@@ -35,36 +33,32 @@ public class UIMainMenu : MonoBehaviour
     {
         btnPlay.onClick.RemoveAllListeners();
         btnSettings.onClick.RemoveAllListeners();
-        btnContinue.onClick.RemoveAllListeners();
+        btnCredits.onClick.RemoveAllListeners();
         btnExit.onClick.RemoveAllListeners();
     }
 
     private void OnPlayClicked()
     {
-        throw new NotImplementedException();
+        mainMenuCanvas.SetActive(false);
+        SceneManager.LoadScene("Gameplay");
     }
 
     private void OnSettingsClicked()
     {
-        throw new NotImplementedException();
+        mainMenuCanvas.SetActive(false);
+        settingsPanel.SetActive(true);
+        creditsPanel.SetActive(false);
     }
 
-    private void OnContinueClicked()
+    private void OnCreditsClicked()
     {
-        throw new NotImplementedException();
+        mainMenuCanvas.SetActive(false);
+        settingsPanel.SetActive(false);
+        creditsPanel.SetActive(true);
     }
 
     private void OnExitClicked()
     {
-        throw new NotImplementedException();
-    }
-
-
-
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        UnityEditor.EditorApplication.isPlaying = false;
     }
 }
