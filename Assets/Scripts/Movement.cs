@@ -9,7 +9,7 @@ public class Movement : MonoBehaviour
     [SerializeField] private KeyCode moveLeft = KeyCode.A;
 
     [Header("SpeedSettings")]
-    [SerializeField] private float moveSpeed = 1f;
+    public float moveSpeed = 1f;
 
     [SerializeField] private bool isContinuousMovement = true;
 
