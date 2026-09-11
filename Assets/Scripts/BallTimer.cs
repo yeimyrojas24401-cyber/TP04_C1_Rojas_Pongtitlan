@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class BallTimer : MonoBehaviour
 {
-    [SerializeField] private float timer = 20f;
+    [SerializeField] private float timer = 3f;
 
     private bool timerActive = false;
 
@@ -12,38 +12,15 @@ public class BallTimer : MonoBehaviour
         {
             timer -= Time.deltaTime;
 
+            Debug.Log(timer);
+
             if (timer <= 0)
             {
                 timer = 0;
+                timerActive = false;
 
-                MakeGoal();
+                Debug.Log("¡Se acabó el tiempo!");
             }
-        }
-    }
-
-    public void StartTimer()
-    {
-        timer = 20f;
-        timerActive = true;
-    }
-
-    public void StopTimer()
-    {
-        timerActive = false;
-        timer = 20f;
-    }
-
-    private void MakeGoal()
-    {
-        timerActive = false;
-
-        if (transform.position.x < 0)
-        {
-            Debug.Log("¡Gol para el jugador derecho!");
-        }
-        else
-        {
-            Debug.Log("¡Gol para el jugador izquierdo!");
         }
     }
 }

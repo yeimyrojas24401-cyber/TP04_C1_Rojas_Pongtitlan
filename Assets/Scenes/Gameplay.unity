@@ -605,11 +605,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 541183961}
-  - component: {fileID: 541183964}
   - component: {fileID: 541183963}
   - component: {fileID: 541183962}
   m_Layer: 0
-  m_Name: Right
+  m_Name: Goal2
   m_TagString: Limits
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -735,18 +734,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &541183964
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 541183960}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b3738ebbc72c2747845fbb873a171f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LimitsIdentifier
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1129,11 +1116,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1101411057}
-  - component: {fileID: 1101411060}
   - component: {fileID: 1101411059}
   - component: {fileID: 1101411058}
   m_Layer: 0
-  m_Name: Left
+  m_Name: Goal1
   m_TagString: Limits
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1259,18 +1245,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &1101411060
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1101411056}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b3738ebbc72c2747845fbb873a171f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LimitsIdentifier
 --- !u!1 &1217922032
 GameObject:
   m_ObjectHideFlags: 0
@@ -1280,7 +1254,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1217922033}
-  - component: {fileID: 1217922036}
   - component: {fileID: 1217922035}
   - component: {fileID: 1217922034}
   m_Layer: 0
@@ -1410,18 +1383,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &1217922036
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1217922032}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b3738ebbc72c2747845fbb873a171f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LimitsIdentifier
 --- !u!1 &1311187246
 GameObject:
   m_ObjectHideFlags: 0
@@ -1431,7 +1392,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1311187247}
-  - component: {fileID: 1311187250}
   - component: {fileID: 1311187249}
   - component: {fileID: 1311187248}
   m_Layer: 0
@@ -1561,18 +1521,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &1311187250
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1311187246}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b3738ebbc72c2747845fbb873a171f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LimitsIdentifier
 --- !u!1 &1823294104
 GameObject:
   m_ObjectHideFlags: 0
