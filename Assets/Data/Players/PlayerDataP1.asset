@@ -16,7 +16,10 @@ MonoBehaviour:
   moveDown: 115
   moveRight: 100
   moveLeft: 97
-  speed: 3
+  speedOptions:
+  - 500
+  - 1000
+  - 2000
   variantPrefabs:
   - {fileID: 703990472317093879, guid: 0aa67e8a8054e9844997ba240baffe07, type: 3}
   - {fileID: 5257710148914385262, guid: 302929c3e95ee744bb8bfe34359a8fa7, type: 3}

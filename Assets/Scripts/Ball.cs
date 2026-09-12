@@ -43,5 +43,11 @@ public class Ball : MonoBehaviour
             }
                 ballRb.linearVelocity = newVelocity;
         }
+
+    }
+    public void ResetBall()
+    {
+        transform.position = startPosition;
+        Launch();
     }
 }
