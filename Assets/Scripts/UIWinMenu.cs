@@ -2,6 +2,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using System;
+using System.ComponentModel.Design;
 
 public class UIWinMenu : MonoBehaviour
 {
@@ -18,7 +19,7 @@ public class UIWinMenu : MonoBehaviour
     [SerializeField] private Button btnExit;
 
     private bool isGameOver;
-        private void Awake()
+    private void Awake()
     {
 
         btnMain.onClick.AddListener(OnMainClicked);
@@ -30,6 +31,7 @@ public class UIWinMenu : MonoBehaviour
     {
         winPanel.SetActive(false);
         Time.timeScale = 1.0f;
+        isGameOver = false;
     }
 
     private void Update()
@@ -57,12 +59,34 @@ public class UIWinMenu : MonoBehaviour
     }
     private void OnMainClicked()
     {
-        throw new NotImplementedException();
+        Time.timeScale = 1f;
+        scoreData.ResetScore();
+        SceneManager.LoadScene("MainMenu");
     }
 
     private void OnExitClicked()
     {
-        throw new NotImplementedException();
+        UnityEditor.EditorApplication.isPlaying = false;
+    }
+
+    private void HandleScoreChanged(int  score)
+    {
+        if (isGameOver) return;
+        if (score.Data.leftScore >= settingsData.roundsToWin)
+        {
+            ShowWin("Player1");
+        }
+        else if (scoreData.rightScore >= settingsData.roundsToWin)
+        {
+            ShowWin("Player2");
+        }
+    }    
+    private void ShowWin (string winnerName)
+    {
+        isGameOver = true;
+        winText.text = $"{winnerName} wins!";
+        winPanel.SetActive(true);
+        Time.timeScale = 0f;
     }
 
 }
