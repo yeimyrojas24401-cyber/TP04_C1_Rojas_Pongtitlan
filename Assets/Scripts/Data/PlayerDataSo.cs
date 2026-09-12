@@ -10,16 +10,32 @@ public class PlayerDataSo : ScriptableObject
     public KeyCode moveLeft = KeyCode.A;
 
     [Header("SpeedSettings")]
-    public float[] speedOptions = { 500f, 1000f, 2000f };
+    public float[] speedOptions = { 500f, 1000f, 2000f }; // opciones de speed
     [NonSerialized] public int speedIndex = 1; //asi lo ponemos en default en la posicion 1 = 1000
-    public float speed => (speedOptions != null && speedOptions.Length >0)
-        ? speedOptions[Mathf.Clamp(speedIndex, 0, speedOptions.Length -1)] : 0f;
-    public event Action<float> OnSpeedChanged;
-    public void SetSpeedIndex (int index)
+    public float speed // este float lo pense para devolver el valor actual FLOAT segun el indice de opciones
+                       // pensemos que actualmente en nuestro array guardamos tres opciones
+                       // y cada una vale algo. Cuando movement mande a llamar a este float va a buscar en ese array
+                       // y devolver el valor que le corresponde 
+                       //ESTE ES EL VALOR QUE SE PONE EN EL PLAYER 1 Y PLAYER 2 SEGUN CORRESPONDA
     {
-        if (speedOptions == null || speedOptions.Length == 0) return;
-        speedIndex = Mathf.Clamp(index, 0, speedOptions.Length - 1);
-        OnSpeedChanged?.Invoke(speed);
+        get //cuando alguien llame a speed ejecuta esto 
+        {
+            if (speedOptions != null && speedOptions.Length > 0) //si la speed options NO es nula y esta dentro del rango de opciones (mayor a 0)
+            {
+                return speedOptions[Mathf.Clamp(speedIndex, 0, speedOptions.Length - 1)]; //busca en speed options la posicion que indica mi speedIndex y devuelve el valor que corresponde a esa posicion
+            }
+            else
+            {
+                return 0f; //si el array por alguna razon no existe devolvera 0
+            }
+        }
+    }
+    public event Action<float> OnSpeedChanged; // este es un evento al que otros pueden llamar especificamente lo cree para los titles y los slider
+    public void SetSpeedIndex(int index) //metodo para cambiar el speedIndex
+    {
+        if (speedOptions == null || speedOptions.Length == 0) return; // si no tengo opciones en speed no hagas nada
+        speedIndex = Mathf.Clamp(index, 0, speedOptions.Length - 1); // guarda el indice y actualiza pero no permitas que se salga de el numero de opciones que me dieron (esto es para el slider)
+        OnSpeedChanged?.Invoke(speed); // ejecuta el evento OnSpeedChanged ahora
     }
 
     [Header("VisualSettings")]
