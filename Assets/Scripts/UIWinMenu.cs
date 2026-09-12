@@ -2,13 +2,13 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using System;
-using System.ComponentModel.Design;
+using UnityEngine.SceneManagement;
 
 public class UIWinMenu : MonoBehaviour
 {
     [Header("Data")]
     [SerializeField] private GameSettingsSo settingsData;
-    [SerializeField] private GameSettingsSo scoreData;
+    [SerializeField] private ScoreDataSo scoreData;
 
     [Header("Panels")]
     [SerializeField] private GameObject winPanel;
@@ -57,22 +57,11 @@ public class UIWinMenu : MonoBehaviour
         scoreData.OnLeftScoreChanged -= HandleScoreChanged;
         scoreData.OnRightScoreChanged -= HandleScoreChanged;
     }
-    private void OnMainClicked()
-    {
-        Time.timeScale = 1f;
-        scoreData.ResetScore();
-        SceneManager.LoadScene("MainMenu");
-    }
-
-    private void OnExitClicked()
-    {
-        UnityEditor.EditorApplication.isPlaying = false;
-    }
 
     private void HandleScoreChanged(int  score)
     {
         if (isGameOver) return;
-        if (score.Data.leftScore >= settingsData.roundsToWin)
+        if (scoreData.leftScore >= settingsData.roundsToWin)
         {
             ShowWin("Player1");
         }
@@ -84,9 +73,20 @@ public class UIWinMenu : MonoBehaviour
     private void ShowWin (string winnerName)
     {
         isGameOver = true;
-        winText.text = $"{winnerName} wins!";
+        winText.text = $"{winnerName}";
         winPanel.SetActive(true);
         Time.timeScale = 0f;
+    }
+    private void OnMainClicked()
+    {
+        Time.timeScale = 1f;
+        scoreData.ResetScore();
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    private void OnExitClicked()
+    {
+        UnityEditor.EditorApplication.isPlaying = false;
     }
 
 }
