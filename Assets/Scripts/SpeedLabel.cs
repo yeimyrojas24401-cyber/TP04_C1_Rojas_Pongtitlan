@@ -19,6 +19,6 @@ public class SpeedLabel : MonoBehaviour
 
     private void HandleSpeedChanged(float newSpeed)
     {
-        label.text = $" {newSpeed:F1}";
+        label.text = $"{newSpeed:0}";
     }
 }

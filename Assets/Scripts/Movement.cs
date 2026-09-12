@@ -8,7 +8,7 @@ public class Movement : MonoBehaviour
     [SerializeField] private bool isContinuousMovement = true;
 
     [Header("Debug: ")]
-    [SerializeField] private float moveSpeedPlayer = 15.0f;
+    [SerializeField] private float moveSpeedPlayer = 1000.0f;
 
 
     private Rigidbody2D rb;
@@ -27,21 +27,22 @@ public class Movement : MonoBehaviour
     {
        if (isContinuousMovement)
         {
+            // Movimiento continuo con fisicas
             if (Input.GetKey(data.moveUp))
             {
-                rb.linearVelocity = new Vector2(0, data.speed);
-            }
-            if (Input.GetKey(data.moveDown))
-            {
-                rb.linearVelocity = new Vector2(0, -data.speed);
+                rb.AddForce(new Vector3(0, moveSpeedPlayer * Time.fixedDeltaTime));
             }
             if (Input.GetKey(data.moveRight))
             {
-                rb.linearVelocity = new Vector2(data.speed, 0);
+                rb.AddForce(new Vector3(moveSpeedPlayer * Time.fixedDeltaTime, 0));
+            }
+            if (Input.GetKey(data.moveDown))
+            {
+                rb.AddForce(new Vector3(0, -moveSpeedPlayer * Time.fixedDeltaTime));
             }
             if (Input.GetKey(data.moveLeft))
             {
-                rb.linearVelocity = new Vector2(-data.speed, 0);
+                rb.AddForce(new Vector3(-moveSpeedPlayer * Time.fixedDeltaTime, 0));
             }
         }
     }
