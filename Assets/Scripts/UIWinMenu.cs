@@ -63,11 +63,11 @@ public class UIWinMenu : MonoBehaviour
         if (isGameOver) return;
         if (scoreData.leftScore >= settingsData.roundsToWin)
         {
-            ShowWin("Player1");
+            ShowWin("Player 1");
         }
         else if (scoreData.rightScore >= settingsData.roundsToWin)
         {
-            ShowWin("Player2");
+            ShowWin("Player 2");
         }
     }    
     private void ShowWin (string winnerName)

@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0667fff05c901448b92a25c75965c28, type: 3}
   m_Name: GameSettings
   m_EditorClassIdentifier: Assembly-CSharp::GameSettingsSo
-  roundsToWin: 3
-  maxRounds: 5
+  roundsToWin: 4
   maxTimeOnSide: 5
   centerX: 0
