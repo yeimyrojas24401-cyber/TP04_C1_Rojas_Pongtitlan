@@ -21,7 +21,7 @@ public class SliderColor : MonoBehaviour
 
     private void OnEnable()
     {
-        sliderColor.value = data.colorIndex; // sincroniza cada vez que se abre el panel
+        sliderColor.value = data.colorIndex; // sincroniza cada vez que se abre el panel (por el enable)
     }
 
     private void OnDestroy()

@@ -34,7 +34,7 @@ public class BallTimerTracker : MonoBehaviour
             return;
         }
         timer += Time.deltaTime;
-        if (timer >= settingsData.maxTimeOnSide)
+        if (timer >= settingsData.time)
         {
             if (isOnLeftSide)
                 scoreData.AddRightPoint();
