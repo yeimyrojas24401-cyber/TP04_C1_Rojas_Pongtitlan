@@ -129,6 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 134493189}
   - component: {fileID: 134493191}
+  - component: {fileID: 134493192}
   - component: {fileID: 134493190}
   m_Layer: 5
   m_Name: TextBestOf
@@ -256,6 +257,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 134493188}
   m_CullTransparentMesh: 1
+--- !u!114 &134493192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 134493188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cab5a3e7fff8b64f821fbe0c8a4bfd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LabelRoundsToWin
+  data: {fileID: 11400000, guid: 4429883a522daf94e81e3c51fce169b0, type: 2}
+  label: {fileID: 134493190}
 --- !u!1 &233277792 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6233824929550452878, guid: 4b4fa031df4b9354a823cc3a1a8f83d8, type: 3}
@@ -1654,6 +1669,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2071365965}
+  - component: {fileID: 2071365967}
   - component: {fileID: 2071365966}
   m_Layer: 5
   m_Name: SliderBestOf
@@ -1737,6 +1753,19 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2071365967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2071365964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f748ee632623b847bd5d8560223045a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SliderRoundsToWin
+  data: {fileID: 11400000, guid: 4429883a522daf94e81e3c51fce169b0, type: 2}
 --- !u!1001 &4522660227697360515
 PrefabInstance:
   m_ObjectHideFlags: 0

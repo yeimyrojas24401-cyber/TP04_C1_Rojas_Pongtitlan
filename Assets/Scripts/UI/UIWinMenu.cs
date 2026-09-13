@@ -58,18 +58,19 @@ public class UIWinMenu : MonoBehaviour
         scoreData.OnRightScoreChanged -= HandleScoreChanged;
     }
 
-    private void HandleScoreChanged(int  score)
+    private void HandleScoreChanged(int score)
     {
         if (isGameOver) return;
-        if (scoreData.leftScore >= settingsData.roundsToWin)
+
+        if (scoreData.leftScore >= settingsData.rounds)
         {
             ShowWin("Player 1");
         }
-        else if (scoreData.rightScore >= settingsData.roundsToWin)
+        else if (scoreData.rightScore >= settingsData.rounds)
         {
             ShowWin("Player 2");
         }
-    }    
+    }
     private void ShowWin (string winnerName)
     {
         isGameOver = true;
