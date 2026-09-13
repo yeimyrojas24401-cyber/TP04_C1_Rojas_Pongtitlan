@@ -2,27 +2,29 @@ using UnityEngine;
 
 public class PlayerVisualController : MonoBehaviour
 {
+    [Header("Data")]
     [SerializeField] private PlayerDataSo data;
 
     private GameObject currentVariantInstance;
     public SpriteRenderer SpriteRenderer { get; private set; }
 
-    private void Awake()
+    private void OnEnable()
     {
         data.OnVariantChanged += HandleVariantChanged;
-    }
+        data.OnColorChanged += HandleColorChanged;
 
-    private void Start()
-    {
         SpawnVariant(data.variantIndex);
     }
 
-    private void OnDestroy()
+    private void OnDisable()
     {
         data.OnVariantChanged -= HandleVariantChanged;
+        data.OnColorChanged -= HandleColorChanged;
     }
 
     private void HandleVariantChanged(int index) => SpawnVariant(index);
+
+    private void HandleColorChanged(Color newColor) => ApplyColor();
 
     private void SpawnVariant(int index)
     {

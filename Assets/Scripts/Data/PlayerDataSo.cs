@@ -54,7 +54,7 @@ public class PlayerDataSo : ScriptableObject
     {
         if (variantPrefabs == null || variantPrefabs.Length == 0) return;
         variantIndex = Mathf.Clamp(index, 0, variantPrefabs.Length - 1);
-        OnVariantChanged?.Invoke(variantIndex);
+        OnVariantChanged?.Invoke(variantIndex);// tirar debugs para ver cuando sale el invoke para ver cuantas veces se esta llamando
     }
     public void SetColor(Color newColor)
     {

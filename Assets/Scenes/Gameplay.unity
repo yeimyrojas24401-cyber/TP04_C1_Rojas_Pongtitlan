@@ -440,8 +440,6 @@ GameObject:
   - component: {fileID: 223369897}
   - component: {fileID: 223369900}
   - component: {fileID: 223369904}
-  - component: {fileID: 223369902}
-  - component: {fileID: 223369903}
   - component: {fileID: 223369901}
   - component: {fileID: 223369898}
   m_Layer: 0
@@ -525,33 +523,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionHandle
   visual: {fileID: 223369904}
---- !u!114 &223369902
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 223369895}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ddf946e580a65e4ab72292f237e2e3b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ColorChanger
-  data: {fileID: 11400000, guid: 6e8af08e513bcc541a02025127d9c1e9, type: 2}
-  visual: {fileID: 223369904}
---- !u!114 &223369903
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 223369895}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d6f1971ef0bdef439f94f102d1c0f44, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::VisualChanger
-  data: {fileID: 11400000, guid: 6e8af08e513bcc541a02025127d9c1e9, type: 2}
 --- !u!114 &223369904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1598,8 +1569,6 @@ GameObject:
   - component: {fileID: 754140585}
   - component: {fileID: 754140588}
   - component: {fileID: 754140592}
-  - component: {fileID: 754140590}
-  - component: {fileID: 754140591}
   - component: {fileID: 754140589}
   - component: {fileID: 754140586}
   m_Layer: 0
@@ -1683,33 +1652,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionHandle
   visual: {fileID: 754140592}
---- !u!114 &754140590
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 754140583}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ddf946e580a65e4ab72292f237e2e3b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ColorChanger
-  data: {fileID: 11400000, guid: 9291494fc7d19374184fee58f7812e72, type: 2}
-  visual: {fileID: 754140592}
---- !u!114 &754140591
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 754140583}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d6f1971ef0bdef439f94f102d1c0f44, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::VisualChanger
-  data: {fileID: 11400000, guid: 9291494fc7d19374184fee58f7812e72, type: 2}
 --- !u!114 &754140592
 MonoBehaviour:
   m_ObjectHideFlags: 0
