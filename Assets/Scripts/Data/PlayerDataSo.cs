@@ -48,7 +48,6 @@ public class PlayerDataSo : ScriptableObject
         : null;
 
     public event Action<int> OnVariantChanged;
-    public event Action<Color> OnColorChanged;
     public void SetVariantIndex(int index)
     {
         if (variantPrefabs == null || variantPrefabs.Length == 0) return;
