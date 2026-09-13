@@ -40,7 +40,6 @@ public class PlayerDataSo : ScriptableObject
 
     [Header("VisualSettings")]
     public GameObject [] variantPrefabs = new GameObject[3]; // aqui hice un array de 3 para la informacion de sus sprites
-    public Color color = Color.white;
 
     [NonSerialized] public int variantIndex = 0;
 
@@ -54,12 +53,30 @@ public class PlayerDataSo : ScriptableObject
     {
         if (variantPrefabs == null || variantPrefabs.Length == 0) return;
         variantIndex = Mathf.Clamp(index, 0, variantPrefabs.Length - 1);
-        OnVariantChanged?.Invoke(variantIndex);// tirar debugs para ver cuando sale el invoke para ver cuantas veces se esta llamando
+        OnVariantChanged?.Invoke(variantIndex);
     }
-    public void SetColor(Color newColor)
+    [Header("ColorSettings")]
+    public Color[] colorOptions = { Color.white, Color.green, Color.blue };
+    [NonSerialized] public int colorIndex = 0;
+
+    public Color color
     {
-        color = newColor;
+        get
+        {
+            if (colorOptions != null && colorOptions.Length > 0)
+                return colorOptions[Mathf.Clamp(colorIndex, 0, colorOptions.Length - 1)];
+            return Color.white;
+        }
+    }
+
+    public event Action<Color> OnColorChanged;
+
+    public void SetColorIndex(int index)
+    {
+        if (colorOptions == null || colorOptions.Length == 0) return;
+        colorIndex = Mathf.Clamp(index, 0, colorOptions.Length - 1);
         OnColorChanged?.Invoke(color);
     }
+
 
 }
