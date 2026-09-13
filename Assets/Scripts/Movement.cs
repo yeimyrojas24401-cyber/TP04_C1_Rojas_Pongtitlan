@@ -14,7 +14,7 @@ public class Movement : MonoBehaviour
     [SerializeField] private float minX = -8f;
     [SerializeField] private float center = 0f;
     [SerializeField] private float maxX = 8f;
-    [SerializeField] private bool isLeftSide = true; // check this on P1, uncheck on P2
+    [SerializeField] private bool isLeftSide = true;
 
     private Rigidbody2D rb;
 
@@ -23,10 +23,18 @@ public class Movement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    private void Start()
+    private void OnEnable()
     {
-        moveSpeedPlayer = data.speed;
+        data.OnSpeedChanged += HandleSpeedChanged;
+        moveSpeedPlayer = data.speed; // sincroniza apenas se activa/reactiva
     }
+
+    private void OnDisable()
+    {
+        data.OnSpeedChanged -= HandleSpeedChanged;
+    }
+
+    private void HandleSpeedChanged(float newSpeed) => moveSpeedPlayer = newSpeed;
 
     private void FixedUpdate()
     {
@@ -53,19 +61,12 @@ public class Movement : MonoBehaviour
         float clampedX;
 
         if (isLeftSide)
-        {
             clampedX = Mathf.Clamp(clampedPos.x, minX, center);
-        }
         else
-        {
             clampedX = Mathf.Clamp(clampedPos.x, center, maxX);
-        }
 
-        // if clamping changed the x position, we hit a boundary -> kill x velocity
         if (!Mathf.Approximately(clampedX, clampedPos.x))
-        {
             velocity.x = 0f;
-        }
 
         clampedPos.x = clampedX;
 
