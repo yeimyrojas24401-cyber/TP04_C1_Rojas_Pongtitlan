@@ -326,10 +326,82 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 811297642}
     m_Modifications:
+    - target: {fileID: 179990293651054383, guid: 4b4fa031df4b9354a823cc3a1a8f83d8, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 179990293651054383, guid: 4b4fa031df4b9354a823cc3a1a8f83d8, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 179990293651054383, guid: 4b4fa031df4b9354a823cc3a1a8f83d8, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 225673389746803814, guid: 4b4fa031df4b9354a823cc3a1a8f83d8, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 303627852672288203, guid: 4b4fa031df4b9354a823cc3a1a8f83d8, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1192871575288325898, guid: 4b4fa031df4b9354a823cc3a1a8f83d8, type: 3}
       propertyPath: backPanel
       value: 
       objectReference: {fileID: 75386858}
+    - target: {fileID: 1455821707907069116, guid: 4b4fa031df4b9354a823cc3a1a8f83d8, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1549534970143964383, guid: 4b4fa031df4b9354a823cc3a1a8f83d8, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2232681335777316247, guid: 4b4fa031df4b9354a823cc3a1a8f83d8, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2661602889563373993, guid: 4b4fa031df4b9354a823cc3a1a8f83d8, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2661602889563373993, guid: 4b4fa031df4b9354a823cc3a1a8f83d8, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2661602889563373993, guid: 4b4fa031df4b9354a823cc3a1a8f83d8, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2971390958934171105, guid: 4b4fa031df4b9354a823cc3a1a8f83d8, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3888029810979868522, guid: 4b4fa031df4b9354a823cc3a1a8f83d8, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3888029810979868522, guid: 4b4fa031df4b9354a823cc3a1a8f83d8, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4125177604235599658, guid: 4b4fa031df4b9354a823cc3a1a8f83d8, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4904691604379442941, guid: 4b4fa031df4b9354a823cc3a1a8f83d8, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5156919176696272825, guid: 4b4fa031df4b9354a823cc3a1a8f83d8, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5777472214973185132, guid: 4b4fa031df4b9354a823cc3a1a8f83d8, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6233824929550452878, guid: 4b4fa031df4b9354a823cc3a1a8f83d8, type: 3}
       propertyPath: m_Name
       value: SettingsPanel
@@ -414,6 +486,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8113151697669063229, guid: 4b4fa031df4b9354a823cc3a1a8f83d8, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104456292783479835, guid: 4b4fa031df4b9354a823cc3a1a8f83d8, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9146431532412757858, guid: 4b4fa031df4b9354a823cc3a1a8f83d8, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9146431532412757858, guid: 4b4fa031df4b9354a823cc3a1a8f83d8, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -438,13 +526,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 223369897}
+  - component: {fileID: 223369905}
   - component: {fileID: 223369900}
   - component: {fileID: 223369904}
   - component: {fileID: 223369901}
   - component: {fileID: 223369898}
   m_Layer: 0
   m_Name: Player2
-  m_TagString: Paddle
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -536,6 +625,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerVisualController
   data: {fileID: 11400000, guid: 6e8af08e513bcc541a02025127d9c1e9, type: 2}
+--- !u!114 &223369905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 223369895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9fa383694b730d42981f4e7f6fca810, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PaddleMarker
 --- !u!1001 &365593843
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1193,11 +1294,12 @@ GameObject:
   m_Component:
   - component: {fileID: 541183961}
   - component: {fileID: 541183964}
+  - component: {fileID: 541183965}
   - component: {fileID: 541183963}
   - component: {fileID: 541183962}
   m_Layer: 0
   m_Name: GoalRight
-  m_TagString: Limits
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1337,6 +1439,18 @@ MonoBehaviour:
   scoreData: {fileID: 11400000, guid: cf8a9a61100256c429fc7c7ac98f6d3c, type: 2}
   ball: {fileID: 2104997598}
   isLeftGoal: 0
+--- !u!114 &541183965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 541183960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d4fd9fef7bf83f49969812cadda72e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LimitMarker
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1567,13 +1681,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 754140585}
+  - component: {fileID: 754140593}
   - component: {fileID: 754140588}
   - component: {fileID: 754140592}
   - component: {fileID: 754140589}
   - component: {fileID: 754140586}
   m_Layer: 0
   m_Name: Player1
-  m_TagString: Paddle
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1665,6 +1780,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerVisualController
   data: {fileID: 11400000, guid: 9291494fc7d19374184fee58f7812e72, type: 2}
+--- !u!114 &754140593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 754140583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9fa383694b730d42981f4e7f6fca810, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PaddleMarker
 --- !u!1 &811297638
 GameObject:
   m_ObjectHideFlags: 0
@@ -2011,11 +2138,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1101411057}
   - component: {fileID: 1101411060}
+  - component: {fileID: 1101411061}
   - component: {fileID: 1101411059}
   - component: {fileID: 1101411058}
   m_Layer: 0
   m_Name: GoalLeft
-  m_TagString: Limits
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2155,6 +2283,18 @@ MonoBehaviour:
   scoreData: {fileID: 11400000, guid: cf8a9a61100256c429fc7c7ac98f6d3c, type: 2}
   ball: {fileID: 2104997598}
   isLeftGoal: 1
+--- !u!114 &1101411061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1101411056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d4fd9fef7bf83f49969812cadda72e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LimitMarker
 --- !u!1 &1178438675
 GameObject:
   m_ObjectHideFlags: 0
@@ -2242,11 +2382,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1217922033}
+  - component: {fileID: 1217922036}
   - component: {fileID: 1217922035}
   - component: {fileID: 1217922034}
   m_Layer: 0
   m_Name: Up
-  m_TagString: Limits
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2371,6 +2512,18 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1217922036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1217922032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d4fd9fef7bf83f49969812cadda72e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LimitMarker
 --- !u!1 &1311187246
 GameObject:
   m_ObjectHideFlags: 0
@@ -2380,11 +2533,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1311187247}
+  - component: {fileID: 1311187250}
   - component: {fileID: 1311187249}
   - component: {fileID: 1311187248}
   m_Layer: 0
   m_Name: Down
-  m_TagString: Limits
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2509,6 +2663,18 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1311187250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1311187246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d4fd9fef7bf83f49969812cadda72e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LimitMarker
 --- !u!1 &1460218682
 GameObject:
   m_ObjectHideFlags: 0
@@ -3377,12 +3543,13 @@ GameObject:
   - component: {fileID: 2104997597}
   - component: {fileID: 2104997598}
   - component: {fileID: 2104997599}
+  - component: {fileID: 2104997600}
   - component: {fileID: 2104997596}
   - component: {fileID: 2104997595}
   - component: {fileID: 2104997594}
   m_Layer: 0
   m_Name: Ball
-  m_TagString: Ball
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3565,6 +3732,18 @@ MonoBehaviour:
   settingsData: {fileID: 11400000, guid: 4429883a522daf94e81e3c51fce169b0, type: 2}
   scoreData: {fileID: 11400000, guid: cf8a9a61100256c429fc7c7ac98f6d3c, type: 2}
   ball: {fileID: 2104997598}
+--- !u!114 &2104997600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2104997593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 039975dfbc802424e95456db3cf89379, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BallMarker
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

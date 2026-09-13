@@ -32,18 +32,17 @@ public class Ball : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Paddle"))
+        if (collision.gameObject.TryGetComponent<PaddleMarker>(out _))
         {
             Vector2 newVelocity = ballRb.linearVelocity * velocityMultiplier;
 
-            // sin embargo como no queremos que se acelere indefinidamente tenemos que agregarle un limites 
             if (newVelocity.magnitude > maxSpeed)
             {
                 newVelocity = newVelocity.normalized * maxSpeed;
             }
-                ballRb.linearVelocity = newVelocity;
-        }
 
+            ballRb.linearVelocity = newVelocity;
+        }
     }
     public void ResetBall()
     {

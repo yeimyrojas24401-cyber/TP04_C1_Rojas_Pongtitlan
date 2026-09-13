@@ -11,11 +11,13 @@ public class GoalZone : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (!other.CompareTag("Ball")) return;
+        if (!other.TryGetComponent<BallMarker>(out _)) return;
+
         if (isLeftGoal)
             scoreData.AddRightPoint();
         else
             scoreData.AddLeftPoint();
+
         ball.ResetBall();
     }
 }
