@@ -6,13 +6,14 @@ public class ColorLabel : MonoBehaviour
     [SerializeField] private PlayerDataSo data;
     [SerializeField] private TMP_Text label;
 
-    private void Awake()
-    {
-        data.OnColorChanged += HandleColorChanged;
-    }
-    private void Start()
+    private void OnEnable()
     {
         HandleColorChanged(data.color);
+        data.OnColorChanged += HandleColorChanged;
+    }
+    private void OnDisable()
+    {
+        data.OnColorChanged -= HandleColorChanged;
     }
     private void HandleColorChanged(Color newColor)
     {
