@@ -29,7 +29,9 @@ public class PlayerVisualController : MonoBehaviour
     private void SpawnVariant(int index)
     {
         if (currentVariantInstance != null)
+        {
             Destroy(currentVariantInstance);
+        }
 
         GameObject prefab = data.CurrentVariant;
         if (prefab == null) return;
