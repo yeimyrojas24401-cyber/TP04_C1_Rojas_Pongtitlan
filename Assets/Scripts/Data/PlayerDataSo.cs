@@ -77,7 +77,12 @@ public class PlayerDataSo : ScriptableObject
         colorIndex = Mathf.Clamp(index, 0, colorOptions.Length - 1);
         OnColorChanged?.Invoke(color);
     }
-
+    public void ResetToDefaults()
+    {
+        speedIndex = 1;
+        variantIndex = 0;
+        colorIndex = 0;
+    }
 
 
 

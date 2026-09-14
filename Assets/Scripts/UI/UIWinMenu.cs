@@ -8,6 +8,8 @@ public class UIWinMenu : MonoBehaviour
     [Header("Data")]
     [SerializeField] private GameSettingsSo settingsData;
     [SerializeField] private ScoreDataSo scoreData;
+    [SerializeField] private PlayerDataSo player1Data;
+    [SerializeField] private PlayerDataSo player2Data;
 
     [Header("Panels")]
     [SerializeField] private GameObject winPanel;
@@ -81,6 +83,8 @@ public class UIWinMenu : MonoBehaviour
     {
         Time.timeScale = 1f;
         scoreData.ResetScore();
+        player1Data.ResetToDefaults();
+        player2Data.ResetToDefaults();
         SceneManager.LoadScene("MainMenu");
     }
 

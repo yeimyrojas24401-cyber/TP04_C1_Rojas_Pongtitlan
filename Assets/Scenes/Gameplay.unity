@@ -2853,6 +2853,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::UIWinsMenu
   settingsData: {fileID: 11400000, guid: 4429883a522daf94e81e3c51fce169b0, type: 2}
   scoreData: {fileID: 11400000, guid: cf8a9a61100256c429fc7c7ac98f6d3c, type: 2}
+  player1Data: {fileID: 11400000, guid: 9291494fc7d19374184fee58f7812e72, type: 2}
+  player2Data: {fileID: 11400000, guid: 6e8af08e513bcc541a02025127d9c1e9, type: 2}
   winPanel: {fileID: 1178438675}
   winText: {fileID: 666709210}
   btnMain: {fileID: 1675089803}
