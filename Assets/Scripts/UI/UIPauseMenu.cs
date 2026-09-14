@@ -75,6 +75,10 @@ public class UIPauseMenu : MonoBehaviour
 
     private void OnExitClicked()
     {
+#if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
+#else
+    Application.Quit();
+#endif
     }
 }
