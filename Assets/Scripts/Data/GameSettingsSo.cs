@@ -8,6 +8,20 @@ public class GameSettingsSo : ScriptableObject
     public int[] roundsToWinOptions = {2,3,4};
     [NonSerialized] public int roundsToWinIndex = 1;
 
+    [Header("Time Settings")]
+
+    public float[] maxTimeOnSideOptions = { 5f, 10f, 20f};
+    [NonSerialized] public int maxTimeOnSideIndex = 1;
+
+    [Header("Side")]
+    public float centerX = 0f;
+
+    //Events
+    public event Action<int> OnRoundsToWinChanged;
+    public event Action<float> OnTimeOnSideChanged;
+
+    //Properties
+
     public int rounds
     {
         get
@@ -22,18 +36,6 @@ public class GameSettingsSo : ScriptableObject
             }
         }
     }
-    public event Action<int> OnRoundsToWinChanged;
-    public void SetRoundsToWinIndex (int index)
-    {
-        if (roundsToWinOptions == null || roundsToWinOptions.Length == 0) return;
-        roundsToWinIndex = Mathf.Clamp(index, 0, roundsToWinOptions.Length - 1);
-        OnRoundsToWinChanged?.Invoke(rounds);
-    }
-
-    [Header("Time Settings")]
-
-    public float[] maxTimeOnSideOptions = { 5f, 10f, 20f};
-    [NonSerialized] public int maxTimeOnSideIndex = 1; 
     public float time
     {
         get
@@ -48,7 +50,13 @@ public class GameSettingsSo : ScriptableObject
             }
         }
     }
-    public event Action<float> OnTimeOnSideChanged;
+    public void SetRoundsToWinIndex (int index)
+    {
+        if (roundsToWinOptions == null || roundsToWinOptions.Length == 0) return;
+        roundsToWinIndex = Mathf.Clamp(index, 0, roundsToWinOptions.Length - 1);
+        OnRoundsToWinChanged?.Invoke(rounds);
+    }
+
     public void SetMaxTimeOnSideIndex (int index)
     {
         if (maxTimeOnSideOptions == null || maxTimeOnSideOptions.Length == 0) return;
@@ -56,5 +64,4 @@ public class GameSettingsSo : ScriptableObject
         OnTimeOnSideChanged?.Invoke(time);
     }
 
-    public float centerX = 0f;
 }
