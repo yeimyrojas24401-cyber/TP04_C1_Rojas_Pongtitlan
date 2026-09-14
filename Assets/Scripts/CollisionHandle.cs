@@ -21,16 +21,23 @@ public class CollisionHandle : MonoBehaviour
                                           //se cancela la velocida y ya no empuja al jugador
 
     }
-
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnCollisionExit2D(Collision2D collision)
     {
-        PowerUp powerUp = other.GetComponent<PowerUp>();
-
-
-        if (powerUp != null)
+        if (collision.gameObject.GetComponent<LimitMarker>() != null)
         {
-            powerUp.DoAction();
-
+            visual.SpriteRenderer.color = Color.white;
         }
     }
+
+    //private void OnTriggerEnter2D(Collider2D other)
+    //{
+    //    PowerUp powerUp = other.GetComponent<PowerUp>();
+
+
+    //    if (powerUp != null)
+    //    {
+    //        powerUp.DoAction();
+
+    //    }
+    //}
 }
