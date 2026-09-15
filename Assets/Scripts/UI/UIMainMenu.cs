@@ -22,6 +22,10 @@ public class UIMainMenu : MonoBehaviour
         btnSettings.onClick.AddListener(OnSettingsClicked);
         btnCredits.onClick.AddListener(OnCreditsClicked);
         btnExit.onClick.AddListener(OnExitClicked);
+
+#if UNITY_WEBGL && !UNITY_EDITOR
+    btnExit.gameObject.SetActive(false);
+#endif
     }
 
     private void OnDestroy()

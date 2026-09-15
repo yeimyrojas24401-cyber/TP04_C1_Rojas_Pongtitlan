@@ -22,9 +22,12 @@ public class UIWinMenu : MonoBehaviour
     private bool isGameOver;
     private void Awake()
     {
-
         btnMain.onClick.AddListener(OnMainClicked);
         btnExit.onClick.AddListener(OnExitClicked);
+
+#if UNITY_WEBGL && !UNITY_EDITOR
+    btnExit.gameObject.SetActive(false);
+#endif
     }
 
 
