@@ -34,7 +34,11 @@ public class Movement : MonoBehaviour
         data.OnSpeedChanged -= HandleSpeedChanged;
     }
 
-    private void HandleSpeedChanged(float newSpeed) => moveSpeedPlayer = newSpeed;
+    private void HandleSpeedChanged(float newSpeed)
+    {
+        moveSpeedPlayer = newSpeed;
+    }
+
 
     private void FixedUpdate()
     {

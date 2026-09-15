@@ -3577,7 +3577,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22d0637bd383fff45b0fbdea70d1a406, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Ball
-  initialVelocity: 4
+  initialVelocity: 7
   velocityMultiplier: 1.1
   maxSpeed: 15
   maxLaunchAngle: 30
