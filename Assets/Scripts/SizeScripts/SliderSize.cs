@@ -29,4 +29,3 @@ public class SliderSize : MonoBehaviour
         data.SetVariantIndex(Mathf.RoundToInt(arg0));
     }
 }
-// todas las variables y eventos se inicializan arriba 

@@ -15,14 +15,14 @@ public class PlayerDataSo : ScriptableObject
 
     [Header("VisualSettings")]
     [NonSerialized] public int variantIndex = 0;
-    public GameObject [] variantPrefabs = new GameObject[3]; // aqui hice un array de 3 para la informacion de sus sprites
+    public GameObject[] variantPrefabs = new GameObject[3]; // aqui hice un array de 3 para la informacion de sus sprites
 
     [Header("ColorSettings")]
     public Color[] colorOptions = { Color.white, Color.green, Color.blue };
     [NonSerialized] public int colorIndex = 0;
 
     //Events
-    public event Action<float> OnSpeedChanged; // este es un evento al que otros pueden llamar especificamente lo cree para los titles y los slider
+    public event Action<float> OnSpeedChanged; // este es un evento al que otros pueden llamar especificamente lo cree para los labels
     public event Action<int> OnVariantChanged;
     public event Action<Color> OnColorChanged;
 
@@ -50,8 +50,14 @@ public class PlayerDataSo : ScriptableObject
         get
         {
             if (colorOptions != null && colorOptions.Length > 0)
+            {
                 return colorOptions[Mathf.Clamp(colorIndex, 0, colorOptions.Length - 1)];
-            return Color.white;
+            }
+            else
+            {
+                return Color.white;
+
+            }
         }
     }
     public GameObject CurrentVariant => (variantPrefabs != null && variantPrefabs.Length > 0)
@@ -83,12 +89,5 @@ public class PlayerDataSo : ScriptableObject
         variantIndex = 0;
         colorIndex = 0;
     }
-
-
-
-
-
-
-
 
 }
