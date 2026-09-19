@@ -60,6 +60,11 @@ A 2D physics-based Pong game built in Unity, featuring two players, configurable
 * Game Dev Yeimy Rojas. 
 * Pixel Artist Aurora Salazar.
 
+ ## Notes
+ Thanks to LuisCanary for his playlist on YouTube about the creation of a Pong: https://www.youtube.com/watch?v=Zro8IkFkXUc
+ During the development of this project, artificial intelligence tools were used as support for resolving questions, understanding concepts, and reviewing code. AI was primarily used as a reference and learning resource, providing explanations of programming structures, syntax, and possible solutions to problems encountered during development. No code was directly copied from AI-generated responses; the code implemented in the project was written and developed by the author based on their own understanding and adapted to the specific needs of the project.
+ 
+
 * Contact: 
 * Yeimy Rojas The Midnight Baker.
 * https://www.artstation.com/yeimy24401
