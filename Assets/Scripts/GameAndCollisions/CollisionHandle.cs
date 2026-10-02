@@ -16,10 +16,11 @@ public class CollisionHandle : MonoBehaviour
             visual.SpriteRenderer.color = Color.gray;
 
         if (collision.gameObject.GetComponent<BallMarker>() != null)
+        {
             visual.SpriteRenderer.color = Random.ColorHSV(0f, 1f, 1f, 1f, 0.8f, 1f);
-        rb.linearVelocity = Vector2.zero; // esto nos permite que cuando la pelota vaya a pegarle al 
-                                          //se cancela la velocida y ya no empuja al jugador
-
+            rb.linearVelocity = Vector2.zero; // esto nos permite que cuando la pelota vaya a pegarle al 
+                                              //se cancela la velocida y ya no empuja al jugador
+        }
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
@@ -29,15 +30,4 @@ public class CollisionHandle : MonoBehaviour
         }
     }
 
-    //private void OnTriggerEnter2D(Collider2D other)
-    //{
-    //    PowerUp powerUp = other.GetComponent<PowerUp>();
-
-
-    //    if (powerUp != null)
-    //    {
-    //        powerUp.DoAction();
-
-    //    }
-    //}
 }
