@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class CollisionHandle : MonoBehaviour
+public class PlayerCollisionHandle : MonoBehaviour
 {
     [SerializeField] private PlayerVisualController visual;
     private Rigidbody2D rb;
