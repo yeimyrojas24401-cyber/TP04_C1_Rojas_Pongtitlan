@@ -10,6 +10,8 @@ public class Ball : MonoBehaviour
     [SerializeField] private float maxLaunchAngle = 30f;
     private Rigidbody2D ballRb; // aqui es una variable para mandar a llamar al rigid body que hay dentro de esto
     private Vector3 startPosition;
+
+    private float currentSpeed;
     void Awake()
     {
         ballRb = GetComponent<Rigidbody2D>(); // apenas inicia traeme al componente
@@ -27,21 +29,23 @@ public class Ball : MonoBehaviour
         Vector2 baseDir = new Vector2(xDir, yDir).normalized;
         Vector2 launchDir = Quaternion.Euler(0, 0, angleOffset) * baseDir;
 
-        ballRb.linearVelocity = launchDir * initialVelocity;
+        currentSpeed = initialVelocity;
+        ballRb.linearVelocity = launchDir * currentSpeed;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.TryGetComponent<PaddleMarker>(out _))
         {
-            Vector2 newVelocity = ballRb.linearVelocity * velocityMultiplier;
-
-            if (newVelocity.magnitude > maxSpeed)
+            if (collision.gameObject.TryGetComponent<PaddleMarker>(out _))
             {
-                newVelocity = newVelocity.normalized * maxSpeed;
+                currentSpeed = Mathf.Min(currentSpeed * velocityMultiplier, maxSpeed);
             }
 
-            ballRb.linearVelocity = newVelocity;
+            if (ballRb.linearVelocity.sqrMagnitude > 0.01f)
+            {
+                ballRb.linearVelocity = ballRb.linearVelocity.normalized * currentSpeed;
+            }
         }
     }
     public void ResetBall()
