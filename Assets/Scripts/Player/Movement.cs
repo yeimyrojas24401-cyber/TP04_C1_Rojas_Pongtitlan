@@ -7,6 +7,8 @@ public class Movement : MonoBehaviour
 
     [SerializeField] private bool isContinuousMovement = true;
 
+    // Suggestion: moveSpeedPlayer está marcado como Debug y serializado, pero lo pisa el OnEnable con data.speed y después cada evento OnSpeedChanged. Lo que se escriba en el inspector no dura ni un frame.
+    // Si es solo para mirar, dejalo private y agregale un atributo de solo lectura, o sacale el [SerializeField].
     [Header("Debug: ")]
     [SerializeField] private float moveSpeedPlayer = 1000.0f;
 
@@ -43,6 +45,8 @@ public class Movement : MonoBehaviour
     private void FixedUpdate()
     {
         if (isContinuousMovement)
+        // Warning: AddForce ya integra el tiempo por dentro, no hay que multiplicar por Time.fixedDeltaTime. Como fixedDeltaTime vale 0.02, la fuerza queda dividida por cincuenta, y por eso las opciones de velocidad del SO son 500, 1000 y 2000.
+        // Sacá el Time.fixedDeltaTime de las cuatro llamadas y bajá speedOptions a números que se puedan leer. Es el mismo punto que te marqué en el TP03.
         {
             if (Input.GetKey(data.moveUp))
                 rb.AddForce(new Vector2(0, moveSpeedPlayer * Time.fixedDeltaTime));
@@ -75,6 +79,8 @@ public class Movement : MonoBehaviour
         clampedPos.x = clampedX;
 
         rb.position = clampedPos;
+        // Warning: rb.position y rb.linearVelocity se reescriben en cada FixedUpdate, esté el jugador contra el límite o no. Escribir rb.position teletransporta el cuerpo y saltea la detección de colisiones.
+        // Aplicá el clamp solo cuando hizo falta (ya calculás ese caso con Mathf.Approximately) y usá rb.MovePosition.
         rb.linearVelocity = velocity;
     }
 }

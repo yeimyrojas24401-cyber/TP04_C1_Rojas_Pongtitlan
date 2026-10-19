@@ -38,6 +38,8 @@ public class UIWinMenu : MonoBehaviour
         isGameOver = false;
     }
 
+    // Suggestion: este Update solo tiene un if con un return, así que no hace nada. Unity lo llama igual en todos los frames.
+    // Borralo: la condición de victoria ya la resolvés bien por evento, en HandleScoreChanged.
     private void Update()
     {
         if (isGameOver)

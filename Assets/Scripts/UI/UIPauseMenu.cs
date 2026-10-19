@@ -36,6 +36,8 @@ public class UIPauseMenu : MonoBehaviour
     }
     private void OnDestroy()
     {
+        // Warning: RemoveAllListeners borra también lo que alguien haya cableado desde el inspector, no solo lo que registraste en el Awake. Está repetido en UIMainMenu, UIWinMenu y BtnBackScript.
+        // Como registrás con AddListener(OnContinueClicked), dá de baja con RemoveListener(OnContinueClicked).
         btnContinue.onClick.RemoveAllListeners();
         btnSettings.onClick.RemoveAllListeners();
         btnCredits.onClick.RemoveAllListeners();
@@ -44,6 +46,8 @@ public class UIPauseMenu : MonoBehaviour
 
     private void Update()
     {
+        // Bug: Escape llama siempre a OnContinueClicked, que togglea isPause. Si estás con el panel de settings o el de créditos abiertos (donde pausePanel ya está apagado pero isPause sigue en true), un Escape pone isPause en false y timeScale en 1: el juego arranca a correr con el panel de settings encima.
+        // Que Escape primero cierre el submenú abierto y vuelva al panel de pausa, y solo despause cuando el que está visible es el panel de pausa.
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             OnContinueClicked();
